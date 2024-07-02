@@ -1,3 +1,9 @@
+import random
+import math 
+import string
+
+VOWELS = 'aeiou'
+CONSONANTS = 'bcdfghjklmnpqrstvwxyz'
 
 def get_frequency_dict(sequence):
     """
@@ -15,7 +21,7 @@ def get_frequency_dict(sequence):
         freq[x] = freq.get(x,0) + 1
     return freq
 
-print(get_frequency_dict('amargada'))
+# print(get_frequency_dict('amargada'))
 
 def display_hand(hand):
     """
@@ -39,7 +45,7 @@ def display_hand(hand):
 # Make sure you understand how this function works and what it does!
 # You will need to modify this for Problem #4.
 
-display_hand(get_frequency_dict('amargada'))
+# display_hand(get_frequency_dict('amargada'))
 
 def deal_hand(n):
     """
@@ -67,3 +73,8 @@ def deal_hand(n):
         hand[x] = hand.get(x, 0) + 1
     
     return hand
+
+#
+# Problem #2: Update a hand by removing letters
+
+print(deal_hand(7))
