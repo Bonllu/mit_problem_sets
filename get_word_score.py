@@ -17,6 +17,12 @@ s_l_v = {
 mot = ["weed"]
 
 def get_word_score(paroles, n):
+ '''
+ This function has as input the word played by the gamer and n = the number of letters in the hand. With the list
+ deuxieme we get the first value out of the formula (7 * len(word) - 3 * (n -len(word))). Then we make another
+ list to get the values out of the values by letter in the dictionary s_l_v. We sum it and finally we multiply the
+ two values that we get in fin. The function returns fin.
+ '''
     deuxieme = list()
     cle_valeur = list()
     valeurs = list()
