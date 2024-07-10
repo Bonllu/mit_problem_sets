@@ -2,9 +2,9 @@ import random
 import string 
 import math 
 
-hand = {'j': 2, 'o': 1, 'l': 1, 'w': 1, 'n':2}
+hand = {'j': 4, 'o': 1, 'l': 1, 'w': 1, 'n':2}
 
-word = 'jolly'
+word= 'jjolly'
 
 def update_hand(hand, word):
   
@@ -19,5 +19,8 @@ def update_hand(hand, word):
         if new_hand.get(i) >= copie.get(i):
             del copie[i]
         else:
-            copie[i] = copie[i] - 1
+            copie[i] = copie[i] - new_hand[i]
     return copie
+
+
+print(update_hand(hand, word))
